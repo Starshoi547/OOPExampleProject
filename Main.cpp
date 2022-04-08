@@ -1,17 +1,30 @@
 #include "Student.h"
+#include "Group.h"
 
 int main() {
-	Student st1("Alex", "14");
-	Student st2("Nastya", "13");
-	Student st3("Nikita", "15");
+	Group group("10b");
 
-	st1.setName("Alex");
-	st2.setName("Kate");
-	st3.setName("Peter");
+	Student st1("Alex", 14, 9);
+	Student st2("Nastya", 13, 2);
+	Student st3("Nikita", 15, 10);
+
+	group.add(st1);
+	group.add(st2);
+	group.add(st3);
+
+	double avg = 0;
+
+	for (int i = 0; i < group.getSize(); i++)
+	{
+		avg += group.get(i).getMark();
+	}
+
+	avg /= group.getSize();
+
 	
-	int dependency = st1.getAge();
 
-	cout << st1.getInfo() << endl;
+	cout << group.getInfo() << endl;
+	cout << "Avg mark of group " << avg << endl;
 
 	return 0;
 }

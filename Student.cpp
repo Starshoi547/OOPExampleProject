@@ -4,9 +4,10 @@ Student::Student() {
 
 }
 
-Student::Student(string name, string age) {
+Student::Student(string name, int age, double mark) {
 	this->name = name;
 	this->age = age;
+	this->mark = mark;
 }
 
 string Student::getName() {
@@ -18,26 +19,30 @@ void Student::setName(string initName) {
 }
 
 int Student::getAge() {
-	return stoi(age);
+	return age;
 }
+
 
 void Student::setAge(int age) {
-	if (age >= 14 && age <= 80) {
-		this->age = to_string(age);
-	}
-}
-
-void Student::setAge(string age) {
-	int number = stoi(age);
+	int number = age;
 	if (number >= 14 && number <= 80) {
 		this->age = age;
 	}
 }
 
-string Student::getStringAge() {
-	return age;
+
+double Student::getMark() {
+	return mark;
 }
 
+void Student::setMark(double mark) {
+	if (mark >= 0 && mark <= 10) {
+		this->mark = mark;
+	}
+}
+
+
 string Student::getInfo() {
-	return name + ": age = " + age;
+	return name + ": age = " + to_string(age)
+		+ " mark = " + to_string(mark);
 }

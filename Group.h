@@ -7,6 +7,7 @@ class Group
 private:
 	string name;
 	int size;
+	double mark;
 	Student* list;
 public:
 	Group();
@@ -16,6 +17,7 @@ public:
 
 	void add(Student student);
 	Student get(int index);
+	void set(int index, Student student);
 	int getSize();
 	string getName();
 	void setName(string name);
@@ -25,6 +27,7 @@ public:
 	void sortByStudentMarkDesc();
 	Student getMaxAgeStudent();
 	Student getMinAgeStudent();
-	double calcAvgAgeOfStudents();	
+	double calcAvgAgeOfStudents();
+	string getInfo();
 };
 
