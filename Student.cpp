@@ -4,10 +4,11 @@ Student::Student() {
 
 }
 
-Student::Student(string name, int age, double mark) {
+Student::Student(string name, int age, double mark, char sex) {
 	this->name = name;
 	this->age = age;
 	this->mark = mark;
+	this->sex = sex;
 }
 
 string Student::getName() {
@@ -38,6 +39,16 @@ double Student::getMark() {
 void Student::setMark(double mark) {
 	if (mark >= 0 && mark <= 10) {
 		this->mark = mark;
+	}
+}
+
+char Student::getSex() {
+	return sex;
+}
+
+void Student::setSex(char sex) {
+	if (sex == NULL) {
+		
 	}
 }
 
