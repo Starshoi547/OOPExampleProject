@@ -1,23 +1,23 @@
 #pragma once
 #include "Header.h"
-#include "Student.h"
+#include "Worker.h"
 
 class Group
 {
 private:
 	string name;
 	int size;
-	double mark;
-	Student* list;
+	double YearsOfWork;
+	Worker* list;
 public:
 	Group();
 	Group(string name);
-	Group(string name, Student* list, int size);
+	Group(string name, Worker* list, int size);
 	~Group();
 
-	void add(Student student);
-	Student get(int index);
-	void set(int index, Student student);
+	void add(Worker student);
+	Worker get(int index);
+	void set(int index, Worker worker);
 	int getSize();
 	string getName();
 	void setName(string name);
@@ -25,8 +25,8 @@ public:
 	void sortByStudentNameDesc();
 	void sortByStudentMarkAsc();
 	void sortByStudentMarkDesc();
-	Student getMaxAgeStudent();
-	Student getMinAgeStudent();
+	Worker getMaxAgeStudent();
+	Worker getMinAgeStudent();
 	double calcAvgAgeOfStudents();
 	string getInfo();
 };

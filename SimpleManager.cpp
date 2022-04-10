@@ -3,19 +3,27 @@
 Manager::Manager(){};
 Manager::Manager(string name){};
 
-double Manager::calculateAvgMark(Group group){
+double Manager::calculateAvgYearsOfWork(Group group){
 	double avg = 0;
 
 	for (int i = 0; i < group.getSize(); i++)
 	{
-		avg += group.get(i).getMark();
+		avg += group.get(i).getYearsOfWork();
 	}
 
 	avg /= group.getSize();
 	return avg;
 };
 double Manager::calculateAvgAge(Group group) {
-	return 0;
+	double avg = 0;
+
+	for (int i = 0; i < group.getSize(); i++)
+	{
+		avg += group.get(i).getAge();
+	}
+
+	avg /= group.getSize();
+	return avg;
 };
 int Manager::getCountOfMale(Group group) {
 	int count = 0;

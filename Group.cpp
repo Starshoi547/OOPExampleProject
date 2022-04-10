@@ -10,7 +10,7 @@ Group::Group(string name){
 	size = 0;
 	list = NULL;
 }
-Group::Group(string name, Student* list, int size){
+Group::Group(string name, Worker* list, int size){
 	this->name = name;
 	this->size = size;
 	this->list = list;
@@ -29,34 +29,34 @@ void Group::setName(string name) {
 };
 
 
-Student Group::get(int index) {
+Worker Group::get(int index) {
 	if (list == NULL || index < 0 || index >= size) {
-		return Student("", 0, 0, ' ');
+		return Worker("", 0, 0, ' ', 0);
 	}
 	else {
 		return list[index];
 	}
 };
-void Group::set(int index, Student student) {
+void Group::set(int index, Worker worker) {
 		if (list != NULL && index < 0 && index >= size) {
-			list[index] = student;
+			list[index] = worker;
 		}
 	
 }
 
-void Group::add(Student student) {
+void Group::add(Worker worker) {
 	if (list == NULL) {
-		list = new Student[1];
+		list = new Worker[1];
 		size = 1;
-		list[0] = student;
+		list[0] = worker;
 	}
 	else {
-		Student* temp = new Student[size + 1];
+		Worker* temp = new Worker[size + 1];
 		for (int i = 0; i < size; i++)
 		{
 			temp[i] = list[i];
 		}
-		temp[size] = student;
+		temp[size] = worker;
 		size++;
 		delete[] list;
 		list = temp;
@@ -69,7 +69,7 @@ string Group::getInfo() {
 		return "Group" + name + " is empty.";
 	}
 	else {
-		string msg = "Students of group " + name + ":\n";
+		string msg = "Workers of group " + name + ":\n";
 		for (int i = 0; i < size; i++)
 		{
 			msg += list[i].getInfo() + "\n";
