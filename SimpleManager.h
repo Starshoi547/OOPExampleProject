@@ -13,6 +13,7 @@ public:
 	Manager(string name);
 
 	double calculateAvgYearsOfWork(Group group);
+	int calculateHoursEveryWeek(Group group);
 	double calculateAvgAge(Group group);
 	int getCountOfMale(Group group);
 	int getCountOfFemale(Group group);

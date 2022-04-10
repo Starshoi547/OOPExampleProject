@@ -36,5 +36,9 @@ int main() {
 
 	cout << "Average years of work of group " << group.getName() << " = " << count << endl;
 
+	count = manager1.calculateHoursEveryWeek(group);
+
+	cout << "Hours of work of group " << group.getName() << " every week = " << count << endl;
+
 	return 0;
 }

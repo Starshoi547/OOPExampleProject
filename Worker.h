@@ -9,6 +9,9 @@ private:
 	static const int MIN_HOURS_OF_WORK = 4;
 	static const int MAX_HOUR_OF_WORK = 12;
 
+	static const int MIN_YEARS_OF_WORK = 1;
+	
+
 
 
 

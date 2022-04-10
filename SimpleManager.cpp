@@ -39,3 +39,12 @@ int Manager::getCountOfMale(Group group) {
 int Manager::getCountOfFemale(Group group) {
 	return group.getSize() - getCountOfMale(group);
 };
+
+int Manager::calculateHoursEveryWeek(Group group) {
+	int count = 0;
+	for (int i = 0; i < group.getSize(); i++)
+	{
+		count += (group.get(i).getHoursOfWork()) * 5;
+	}
+	return count;
+};

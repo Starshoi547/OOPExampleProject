@@ -39,8 +39,11 @@ int Worker::getYearsOfWork() {
 }
 
 void Worker::setYearsOfWork(int YearsOfWork) {
-	if (YearsOfWork > 0) {
+	if (YearsOfWork >= MIN_YEARS_OF_WORK) {
 		this->YearsOfWork = YearsOfWork;
+	}
+	if (YearsOfWork < 0) {
+		this->YearsOfWork = MIN_YEARS_OF_WORK;
 	}
 }
 
