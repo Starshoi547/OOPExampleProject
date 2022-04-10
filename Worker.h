@@ -27,6 +27,8 @@ public:
 	void setAge(int age);
 	int getYearsOfWork();
 	void setYearsOfWork(int YearsOfWork);
+	void setHoursOfWork(int YearsOfWork);
+	int getHoursOfWork();
 	void setSex(char sex);
 	char getSex();
 

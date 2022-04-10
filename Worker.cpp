@@ -44,13 +44,27 @@ void Worker::setYearsOfWork(int YearsOfWork) {
 	}
 }
 
+int Worker::getHoursOfWork() {
+	return HoursOfWork;
+}
+
+void Worker::setHoursOfWork(int YearsOfWork) {
+	if (HoursOfWork >= 4) {
+		this->HoursOfWork = HoursOfWork;
+	}
+};
+
 char Worker::getSex() {
 	return sex;
 }
 
 void Worker::setSex(char sex) {
 	if (sex == NULL) {
-
+		sex = 'U';
+		this->sex = sex;
+	}
+	else {
+		this->sex = sex;
 	}
 }
 
