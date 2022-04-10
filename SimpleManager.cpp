@@ -3,8 +3,8 @@
 Manager::Manager(){};
 Manager::Manager(string name){};
 
-double Manager::calculateAvgYearsOfWork(Group group){
-	double avg = 0;
+int Manager::calculateAvgYearsOfWork(Group group){
+	int avg = 0;
 
 	for (int i = 0; i < group.getSize(); i++)
 	{
@@ -14,8 +14,8 @@ double Manager::calculateAvgYearsOfWork(Group group){
 	avg /= group.getSize();
 	return avg;
 };
-double Manager::calculateAvgAge(Group group) {
-	double avg = 0;
+int Manager::calculateAvgAge(Group group) {
+	int avg = 0;
 
 	for (int i = 0; i < group.getSize(); i++)
 	{
