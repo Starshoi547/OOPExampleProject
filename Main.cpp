@@ -2,17 +2,27 @@
 #include "Group.h"
 #include "SimpleManager.h"
 
+
+
+
+
 int main() {
+	
+
+	
+
 	Group group1("Phone Store");
 	Manager manager1("Jack");
 
 	Worker wr1("Alex", 25, 9, 'm', 8);
 	Worker wr2("Nastya", 19, 2, 'f', 4);
 	Worker wr3("Nikita", 81, 10, 'm', 6);
-
+	
+	
 	group1.add(wr1);
 	group1.add(wr2);
 	group1.add(wr3);
+	
 
 	Group group2("Tech Shop");
 	Manager manager2("Pablo");
@@ -21,10 +31,13 @@ int main() {
 	Worker wr5("Ilya", 54, 2, 'm', 6);
 	Worker wr6("Diana", 32, 10, 'f', 5);
 	
+	
 	group2.add(wr4);
 	group2.add(wr5);
 	group2.add(wr6);
 	
+	
+	//cout << "Count: " << Worker::getCount() << "\n" << endl;      >>Do not WORKING for some reason
 
 	cout << group1.getInfo() << endl;
 
@@ -76,5 +89,12 @@ int main() {
 
 	cout << "Hours of work of group " << group2.getName() << " every week = " << count << endl;
 	
+
+
+
+
+
+	
+
 	return 0;
 }

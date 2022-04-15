@@ -1,16 +1,27 @@
 #include "Worker.h"
 
 
+int	Worker::count = 0;
+
 Worker::Worker() {
 
 }
 
 Worker::Worker(string name, int age, int YearsOfWork, char sex, int HoursOfWork) {
+	count++;
 	this->name = name;
 	this->age = age;
 	this->YearsOfWork = YearsOfWork;
 	this->sex = sex;
 	this->HoursOfWork = HoursOfWork;
+}
+
+Worker::~Worker() {
+	count--;
+	}
+
+int Worker::getCount() {
+	return count;
 }
 
 string Worker::getName() {
@@ -70,6 +81,8 @@ void Worker::setSex(char sex) {
 		this->sex = sex;
 	}
 }
+
+
 
 
 string Worker::getInfo() {

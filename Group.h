@@ -21,13 +21,6 @@ public:
 	int getSize();
 	string getName();
 	void setName(string name);
-	void sortByStudentNameAsc();
-	void sortByStudentNameDesc();
-	void sortByStudentMarkAsc();
-	void sortByStudentMarkDesc();
-	Worker getMaxAgeStudent();
-	Worker getMinAgeStudent();
-	double calcAvgAgeOfStudents();
 	string getInfo();
 };
 
