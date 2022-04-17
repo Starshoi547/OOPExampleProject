@@ -2,6 +2,9 @@
 #include "Header.h"
 
 class Worker {
+	friend void changeYearsOfWork(Worker& wr);
+
+
 private:
 	
 	
