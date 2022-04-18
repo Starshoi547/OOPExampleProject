@@ -4,7 +4,7 @@
 Manager::Manager(){};
 Manager::Manager(string name){};
 
-int Manager::calculateAvgYearsOfWork(Group group){
+int Manager::calculateAvgYearsOfWork(Group &group){
 	int avg = 0;
 
 	for (int i = 0; i < group.size; i++)
@@ -15,7 +15,7 @@ int Manager::calculateAvgYearsOfWork(Group group){
 	avg /= group.size;
 	return avg;
 };
-int Manager::calculateAvgAge(Group group) {
+int Manager::calculateAvgAge(Group &group) {
 	int avg = 0;
 
 	for (int i = 0; i < group.size; i++)
@@ -26,7 +26,7 @@ int Manager::calculateAvgAge(Group group) {
 	avg /= group.size;
 	return avg;
 };
-int Manager::getCountOfMale(Group group) {
+int Manager::getCountOfMale(Group &group) {
 	int count = 0;
 	for (int i = 0; i < group.size; i++)
 	{
@@ -37,11 +37,11 @@ int Manager::getCountOfMale(Group group) {
 	}
 	return count;
 };
-int Manager::getCountOfFemale(Group group) {
+int Manager::getCountOfFemale(Group &group) {
 	return group.getSize() - getCountOfMale(group);
 };
 
-int Manager::calculateHoursEveryWeek(Group group) {
+int Manager::calculateHoursEveryWeek(Group &group) {
 	int count = 0;
 	for (int i = 0; i < group.size; i++)
 	{

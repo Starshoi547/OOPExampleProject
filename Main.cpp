@@ -23,7 +23,7 @@ int main() {
 
 	Worker wr1("Alex", 25, 9, 'm', 8);
 
-	changeYearsOfWork(/*&*/wr1);
+	changeYearsOfWork(wr1);
 	cout << wr1.getInfo() << endl;
 	//Worker wr2("Nastya", 19, 2, 'f', 4);
 	//Worker wr3("Nikita", 81, 10, 'm', 6);
