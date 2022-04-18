@@ -17,6 +17,5 @@ public:
 	int calculateAvgAge(Group &group);
 	int getCountOfMale(Group &group);
 	int getCountOfFemale(Group &group);
-	;
 };
 

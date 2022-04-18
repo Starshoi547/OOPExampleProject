@@ -10,10 +10,10 @@ Group::Group(string name){
 	size = 0;
 	list = NULL;
 }
-Group::Group(string name, Worker* list, int size){
+Group::Group(string name, Worker &list, int size){
 	this->name = name;
 	this->size = size;
-	this->list = list;
+	this->list = &list;
 };
 Group::~Group(){};
 
@@ -37,14 +37,14 @@ Worker Group::get(int index) {
 		return list[index];
 	}
 };
-void Group::set(int index, Worker worker) {
+void Group::set(int index, Worker &worker) {
 		if (list != NULL && index < 0 && index >= size) {
 			list[index] = worker;
 		}
 	
 }
 
-void Group::add(Worker worker) {
+void Group::add(Worker &worker) {
 	if (list == NULL) {
 		list = new Worker[1];
 		size = 1;
