@@ -48,7 +48,7 @@ public:
 
 
 
-	string getInfo();
+	virtual string getInfo();
 
 	};
 

@@ -2,6 +2,8 @@
 #include "Worker.h"
 #include "Group.h"
 #include "SimpleManager.h"
+#include "Leader.h"
+//#include "SuperWorker.h"
 
 
 
@@ -10,21 +12,36 @@ void changeYearsOfWork(Worker& wr) {
 	// [rand() % (max - min + 1)] + min
 	//wr->setYearsOfWork(rand() % 15 + 1);
 	//wr.setYearsOfWork(rand() % 15 + 1);
-	wr.YearsOfWork = rand() % 15 + 1; //Only if function is 'friend' to Class
+	int YearsOfWork = rand() % 15 + 1; //Only if function is 'friend' to Class
+	wr.YearsOfWork = YearsOfWork;
 }
 
-int main() {
+void testing(Worker** list, int size) {
+	for (int i = 0; i < size; i++)
+	{
+		cout << list[i]->getInfo() << endl;
+	}
 	
+}
 
-	
+
+int main() {
+	int const SIZE = 10;
+
+	Worker** list = new Worker * [SIZE];
+
+	list[0] = new Worker("Kate", 15, 6, 'f', 6);
+
+	list[1] = new Leader("Karl", 15, 8, 'f', 6, "+375456789054", "peter@tut.by");
 
 	//Group group1("Phone Store");
 	//Manager manager1("Jack");
 
-	Worker wr1("Alex", 25, 9, 'm', 8);
+	testing(list, SIZE);
 
-	changeYearsOfWork(wr1);
-	cout << wr1.getInfo() << endl;
+
+
+	//SuperWorker* spwr1("Domi", 21, 7, 'm', 9);
 	//Worker wr2("Nastya", 19, 2, 'f', 4);
 	//Worker wr3("Nikita", 81, 10, 'm', 6);
 	

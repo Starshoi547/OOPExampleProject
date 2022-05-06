@@ -87,6 +87,7 @@ void Worker::setSex(char sex) {
 
 string Worker::getInfo() {
 	return name + ": age = " + to_string(age)
+		+ " sex = " + (sex == 'm' ? "male" : "female")
 		+ " Years of work = " + to_string(YearsOfWork)
 		+ " Hours of work per day = " + to_string(HoursOfWork);
 }
