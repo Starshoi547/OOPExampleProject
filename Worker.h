@@ -32,9 +32,10 @@ public:
 
 	Worker();
 	~Worker();
+	Worker(string name, int age, int YearsOfWork, char sex, int HoursOfWork);
 
 	static int getCount();
-	Worker(string name, int age, int YearsOfWork, char sex, int HoursOfWork);
+	
 	string getName();
 	void setName(string initName);
 	int getAge();

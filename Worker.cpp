@@ -4,6 +4,11 @@
 int	Worker::count = 0;
 
 Worker::Worker() {
+	name = "None";
+	age = 0;
+	YearsOfWork = 0;
+	sex = 'u';
+	HoursOfWork = 0;
 
 }
 
@@ -53,7 +58,7 @@ void Worker::setYearsOfWork(int YearsOfWork) {
 	if (YearsOfWork >= MIN_YEARS_OF_WORK) {
 		this->YearsOfWork = YearsOfWork;
 	}
-	if (YearsOfWork < 0) {
+	if (YearsOfWork < MIN_YEARS_OF_WORK) {
 		this->YearsOfWork = MIN_YEARS_OF_WORK;
 	}
 }

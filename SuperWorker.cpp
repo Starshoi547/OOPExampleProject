@@ -1,24 +1,39 @@
-/*#include "SuperWorker.h"
+#include "SuperWorker.h"
 
 SuperWorker::SuperWorker() : Worker() {
-	//cout << "Call Leader default constructor..." << endl;	
-	levelOfCleverness = 0;
-	abilityToWork = "no ability";
+	//cout << "Call SuperWorker default constructor..." << endl;	
+	abilityToWork = "-1";
+	levelOfCleverness = "1 IQ";
 }
 
-SuperWorker::SuperWorker(string name, int age, int YearsOfWork, char sex, int HoursOfWork, string abilityToWork, int levelOfCleverness) : Worker(name, age, YearsOfWork, sex, HoursOfWork) {
+SuperWorker::SuperWorker(string name, int age, int YearsOfWork, char sex, int HoursOfWork, string abilityToWork, string levelOfCleverness) : Worker(name, age, YearsOfWork, sex, HoursOfWork) {
 
-	this->levelOfCleverness = levelOfCleverness;
 	this->abilityToWork = abilityToWork;
+	this->levelOfCleverness = levelOfCleverness;
 }
 
 SuperWorker::~SuperWorker() {
-	//cout << "Call Leader destructor..." << endl;
+	//cout << "Call SuperWorker destructor..." << endl;
+}
+
+string SuperWorker::getAbilityToWork() {
+	return abilityToWork;
+}
+
+void SuperWorker::setAbilityToWork(string abilityToWork) {
+	this->abilityToWork = abilityToWork;
+}
+
+string SuperWorker::getLevelOfCleverness() {
+	return levelOfCleverness;
+}
+
+void SuperWorker::setLevelOfCleverness(string levelOfCleverness) {
+	this->levelOfCleverness = levelOfCleverness;
 }
 
 string SuperWorker::getInfo() {
 	return Worker::getInfo()
-		+ "; levelOfCleverness = " + to_string(levelOfCleverness)
-		+ "; abilityToWork = " + abilityToWork;
+		+ "; Ability to work = " + abilityToWork
+		+ "; Level of Cleverness = " + levelOfCleverness;
 }
-*/

@@ -3,7 +3,7 @@
 #include "Group.h"
 #include "SimpleManager.h"
 #include "Leader.h"
-//#include "SuperWorker.h"
+#include "SuperWorker.h"
 
 
 
@@ -34,6 +34,8 @@ int main() {
 
 	list[1] = new Leader("Karl", 15, 8, 'f', 6, "+375456789054", "peter@tut.by");
 
+	list[2] = new SuperWorker("Karl", 15, 8, 'f', 6, "5", "100 IQ");
+
 	//Group group1("Phone Store");
 	//Manager manager1("Jack");
 
@@ -41,9 +43,7 @@ int main() {
 
 
 
-	//SuperWorker* spwr1("Domi", 21, 7, 'm', 9);
-	//Worker wr2("Nastya", 19, 2, 'f', 4);
-	//Worker wr3("Nikita", 81, 10, 'm', 6);
+
 	
 	
 	//group1.add(wr1);
